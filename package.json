@@ -2,18 +2,24 @@
   "name": "discordbotproj",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node ."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^14.16.3",
     "discordbotproj": "file:",
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "ffmpeg-static": "^5.2.0",
+    "tone": "^15.0.4"
   },
   "devDependencies": {
-    "eslint": "^9.16.0"
+    "@types/node": "^22.10.7",
+    "eslint": "^9.16.0",
+    "tsx": "^4.19.2"
   }
 }

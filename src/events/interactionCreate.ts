@@ -1,11 +1,14 @@
-const { Events } = require(`discord.js`);
+import 'discord.js';
+import { Collection, ChatInputCommandInteraction, Events, MessageFlags } from 'discord.js';
+import { BotClient } from '../BotClient';
 
 module.exports = {
     name: Events.InteractionCreate,
-    async execute(interaction) {
+    async execute(interaction : ChatInputCommandInteraction) {
         if (!interaction.isChatInputCommand()) return;
 
-        const command = interaction.client.commands.get(interaction.commandName);
+        const client = interaction.client as BotClient;
+        const command = client.commands.get(interaction.commandName);
 
         if (!command) {
             console.error(`No command matching ${interaction.commandName} was found.`);
