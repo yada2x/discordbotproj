@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^14.16.3",
+    "discordbotproj": "file:",
     "dotenv": "^16.4.7"
   },
   "devDependencies": {
